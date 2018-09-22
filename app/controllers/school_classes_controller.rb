@@ -18,7 +18,7 @@ class SchoolClassesController < ApplicationController
   end
 
   def update
-
+    @class = SchoolClass.update(school_params(:title, :room_number))
   end
 
   def school_params(*args)
