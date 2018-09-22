@@ -1904,3 +1904,11 @@ Processing by SchoolClassesController#update as HTML
   [1m[35m (3.7ms)[0m  commit transaction
 Redirected to http://67.205.130.239:56838/school_classes/1
 Completed 302 Found in 24ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/school_classes/1" for 74.72.244.248 at 2018-09-22 14:44:21 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered school_classes/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.2ms)
