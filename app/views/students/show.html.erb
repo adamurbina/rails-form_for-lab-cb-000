@@ -1,8 +1,2 @@
-<h1>Student</h1>
-
-<%= form_for(@student) do |f| %>
-  <%= f.label :first_name %>:
-  <%= @student.first_name %><br>
-  <%= f.label :last_name %>
-  <%= @student.last_name %>
-<% end %>
+<h1>First Name: <%= @student.first_name %>
+Last Name: <%= @student.last_name %></h1>
