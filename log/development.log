@@ -1411,3 +1411,13 @@ Started GET "/students/3" for 74.72.244.248 at 2018-09-22 14:12:52 +0000
 Processing by StudentsController#show as HTML
   Parameters: {"id"=>"3"}
   [1m[35mStudent Load (0.3ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 246ms (Views: 210.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students/3" for 74.72.244.248 at 2018-09-22 14:12:55 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.2ms)

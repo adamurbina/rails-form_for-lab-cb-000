@@ -10,11 +10,11 @@ class StudentsController < ApplicationController
   end
 
   def show
-    get_student(params[:id])
+    @student = Student.find(id)
   end
 
   def edit
-    get_student(params[:id])
+    @student = Student.find(id)
   end
 
   def update
@@ -23,10 +23,6 @@ class StudentsController < ApplicationController
 
   def student_params(*args)
     params.require(:student).permit(*args)
-  end
-
-  def get_student(id)
-    @student = Student.find(id)
   end
 
 end
