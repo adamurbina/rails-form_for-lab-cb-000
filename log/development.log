@@ -1513,3 +1513,11 @@ Processing by StudentsController#edit as HTML
   [1m[36mStudent Load (0.2ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
   Rendered students/edit.html.erb within layouts/application (1.8ms)
 Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students/3/edit" for 74.72.244.248 at 2018-09-22 14:20:18 +0000
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/edit.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
