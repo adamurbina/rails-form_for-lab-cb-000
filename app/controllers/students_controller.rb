@@ -18,7 +18,7 @@ class StudentsController < ApplicationController
   end
 
   def update
-
+    binding.pry
   end
 
   def student_params(*args)
