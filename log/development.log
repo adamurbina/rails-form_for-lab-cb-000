@@ -1781,3 +1781,20 @@ ArgumentError (wrong number of arguments (given 2, expected 1)):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.1ms)
+
+
+Started POST "/school_classes" for 74.72.244.248 at 2018-09-22 14:37:06 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f5ljjxu9AthXGzOEqDUWeO4iuTMlzAcBtkS2xgEGQKkM3MXQL8lJbCnZ/C6ArHqjxyyOkvKtBJUjexNnSnL49g==", "school_class"=>{"title"=>"Computers 101", "room_number"=>"520"}, "commit"=>"Create School Class"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Computers 101"], ["room_number", 520], ["created_at", "2018-09-22 14:37:06.885443"], ["updated_at", "2018-09-22 14:37:06.885443"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+Redirected to http://67.205.130.239:56838/school_classes/1
+Completed 302 Found in 23ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/school_classes/1" for 74.72.244.248 at 2018-09-22 14:37:08 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered school_classes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
