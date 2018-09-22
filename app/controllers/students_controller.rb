@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    binding.pry
+    raise params
   end
 
   def show
