@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    raise params
+    puts params.inspect
   end
 
   def show
