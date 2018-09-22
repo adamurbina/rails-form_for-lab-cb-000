@@ -1,7 +1,6 @@
 class StudentsController < ApplicationController
 
   def new
-
   end
 
   def create
@@ -15,7 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
-
+    binding.pry
   end
 
   def update
