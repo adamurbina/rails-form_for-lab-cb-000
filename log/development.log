@@ -1765,3 +1765,15 @@ Started GET "/school_classes/new" for 74.72.244.248 at 2018-09-22 14:32:50 +0000
 Processing by SchoolClassesController#new as HTML
   Rendered school_classes/new.html.erb within layouts/application (2.0ms)
 Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for 74.72.244.248 at 2018-09-22 14:36:40 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f5ljjxu9AthXGzOEqDUWeO4iuTMlzAcBtkS2xgEGQKkM3MXQL8lJbCnZ/C6ArHqjxyyOkvKtBJUjexNnSnL49g==", "school_class"=>{"title"=>"Computers 101", "room_number"=>"520"}, "commit"=>"Create School Class"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  app/controllers/school_classes_controller.rb:24:in `school_params'
+  app/controllers/school_classes_controller.rb:7:in `create'
+
+
