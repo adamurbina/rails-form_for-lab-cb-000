@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    puts params.inspect
+    @student = Student.new()
   end
 
   def show
@@ -18,6 +18,10 @@ class StudentsController < ApplicationController
 
   def update
 
+  end
+
+  def student_params(*args)
+    params.require(:student).permit(*args)
   end
 
 end
