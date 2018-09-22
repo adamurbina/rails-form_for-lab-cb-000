@@ -1126,3 +1126,47 @@ Started GET "/students/3" for 74.72.244.248 at 2018-09-22 14:01:09 +0000
 Processing by StudentsController#show as HTML
   Parameters: {"id"=>"3"}
   [1m[36mStudent Load (0.3ms)[0m  [1mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered students/show.html.erb within layouts/application (19.4ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<ActionView::Helpers::FormBuilder:0x007f319a7ac6f0>):
+    2: 
+    3: <%= form_for(@student) do |f| %>
+    4:   <%= f.label :first_name %>
+    5:   <%= f.first_name %>
+    6:   <%= f.label :last_name %>
+    7:   <%= f.last_name %>
+    8: <% end %>
+  app/views/students/show.html.erb:5:in `block in _app_views_students_show_html_erb__3644634205108207600_69925507780060'
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__3644634205108207600_69925507780060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.0ms)
+
+
+Started GET "/students/3" for 74.72.244.248 at 2018-09-22 14:01:18 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mStudent Load (0.2ms)[0m  SELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered students/show.html.erb within layouts/application (15.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `first_name' for #<ActionView::Helpers::FormBuilder:0x007f3199fa2e50>):
+    2: 
+    3: <%= form_for(@student) do |f| %>
+    4:   <%= f.label :first_name %>
+    5:   <%= f.first_name %>
+    6:   <%= f.label :last_name %>
+    7:   <%= f.last_name %>
+    8: <% end %>
+  app/views/students/show.html.erb:5:in `block in _app_views_students_show_html_erb__3644634205108207600_69925507780060'
+  app/views/students/show.html.erb:3:in `_app_views_students_show_html_erb__3644634205108207600_69925507780060'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.8ms)
