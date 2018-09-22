@@ -10,11 +10,11 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find(params[:id])
+    get_student(params[:id])
   end
 
   def edit
-    get_student(id)
+    get_student(params[:id])
   end
 
   def update
