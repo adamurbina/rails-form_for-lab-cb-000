@@ -18,7 +18,8 @@ class StudentsController < ApplicationController
   end
 
   def update
-    binding.pry
+    @student = Student.find(params[:id])
+    
   end
 
   def student_params(*args)
