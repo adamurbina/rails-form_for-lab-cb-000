@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
-    binding.pry
+    get_student(id)
   end
 
   def update
@@ -23,6 +23,10 @@ class StudentsController < ApplicationController
 
   def student_params(*args)
     params.require(:student).permit(*args)
+  end
+
+  def get_student(id)
+    @student = Student.find(id)
   end
 
 end
