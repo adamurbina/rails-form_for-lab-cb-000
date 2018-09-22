@@ -5,7 +5,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-
+    puts params
   end
 
   def show
